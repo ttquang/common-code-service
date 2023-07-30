@@ -41,7 +41,9 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(Customizer.withDefaults())
-                .authorizeHttpRequests((authorize) -> authorize.anyRequest().authenticated()).httpBasic(Customizer.withDefaults())
+                .authorizeHttpRequests((authz) -> authz
+                        .requestMatchers("/api/**").hasRole("ADMIN")
+                        .anyRequest().authenticated()).httpBasic(Customizer.withDefaults())
                 .build();
     }
 
