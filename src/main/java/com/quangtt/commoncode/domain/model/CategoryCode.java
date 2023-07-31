@@ -24,5 +24,5 @@ public class CategoryCode {
     @CollectionTable(
             name = "ENTRY_CODE",
             joinColumns = @JoinColumn(name = "CATEGORY_ID"))
-    List<EntryCode> pledgors = new ArrayList<>();
+    List<EntryCode> entryCodes = new ArrayList<>();
 }
