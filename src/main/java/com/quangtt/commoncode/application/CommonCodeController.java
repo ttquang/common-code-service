@@ -1,7 +1,7 @@
-package com.quangtt.commoncode.controller;
+package com.quangtt.commoncode.application;
 
 import com.quangtt.commoncode.common.error.InternalServerError;
-import com.quangtt.commoncode.domain.model.CategoryCode;
+import com.quangtt.commoncode.infrastructure.model.CategoryCode;
 import com.quangtt.commoncode.domain.service.CommonCodeService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;

@@ -1,5 +1,6 @@
-package com.quangtt.commoncode.domain.model;
+package com.quangtt.commoncode.infrastructure.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,10 @@ import org.hibernate.annotations.Parent;
 public class EntryCode {
     String code;
     String name;
+    String refCode;
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id")
     @Parent
     CategoryCode category;

@@ -1,6 +1,6 @@
-package com.quangtt.commoncode.domain.repository;
+package com.quangtt.commoncode.infrastructure.repository;
 
-import com.quangtt.commoncode.domain.model.CategoryCode;
+import com.quangtt.commoncode.infrastructure.model.CategoryCode;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

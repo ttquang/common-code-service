@@ -1,4 +1,4 @@
-package com.quangtt.commoncode.domain.model;
+package com.quangtt.commoncode.infrastructure.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -20,7 +20,7 @@ public class CategoryCode {
     String code;
     String name;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(
             name = "ENTRY_CODE",
             joinColumns = @JoinColumn(name = "CATEGORY_ID"))
